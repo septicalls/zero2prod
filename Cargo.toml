@@ -1,10 +1,19 @@
 [package]
 name = "zero2prod"
 version = "0.1.0"
+authors = ["Vyasa M Nayak <septicalls@proton.me>"]
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "zero2prod"
 
 [dependencies]
 actix-web = "4.3.1"
 tokio = "1.31.0"
+
+[dev-dependencies]
+reqwest = "0.11"
